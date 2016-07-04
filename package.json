@@ -18,9 +18,13 @@
     "serve-favicon": "~2.3.0"
   },
   "devDependencies": {
+    "babel-preset-react": "^6.11.1",
+    "babel-register": "^6.9.0",
+    "babelify": "^7.3.0",
     "grunt": "^1.0.1",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
-    "grunt-sass": "^1.2.0"
+    "grunt-sass": "^1.2.0",
+    "node-jsx": "^0.13.3"
   }
 }
