@@ -15,11 +15,11 @@
     "morgan": "~1.7.0",
     "react": "^15.2.0",
     "react-dom": "^15.2.0",
-    "serve-favicon": "~2.3.0"
-  },
-  "devDependencies": {
+    "serve-favicon": "~2.3.0",
     "babel-preset-react": "^6.11.1",
     "babel-register": "^6.9.0",
+  },
+  "devDependencies": {
     "babelify": "^7.3.0",
     "grunt": "^1.0.1",
     "grunt-contrib-sass": "^1.0.0",
