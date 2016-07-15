@@ -1,7 +1,5 @@
-body {
-  font: 'Source Code Pro';
-}
+// import foundation along with any overrides
+@import "../../bower_components/foundation-sites/assets/foundation";
 
-html {
-  h1: 16px;
-}
+// layout sass file
+@import "layout";

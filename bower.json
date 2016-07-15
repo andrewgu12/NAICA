@@ -1,0 +1,25 @@
+{
+  "name": "naica",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Andrew Gu <andrew@mingbogu.com>",
+    "Matthew Jiang <matthewljiang@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/andrewgu12/NAICA",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation-sites": "^6.2.3",
+    "jquery": "^3.1.0"
+  },
+  "resolutions": {
+    "jquery": "~2.2.0"
+  }
+}
