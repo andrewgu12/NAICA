@@ -1,0 +1,13 @@
+// color palette
+$foundation-palette: (
+  primary: #F06D64,
+  secondary: #777,
+  success: #3adb76,
+  warning: #ffae00,
+  alert: #ec5840,
+);
+
+// converts to ~960px
+$inner_width: 60em;
+// converts to ~150px
+$menu_height: 5.625em;
