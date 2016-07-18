@@ -9,23 +9,9 @@ html
 		link(rel='stylesheet', href='/stylesheets/library.css')
 	body
 		#container
-			.top-bar
-				.top-bar_container
-					.top-bar-title
-						strong NAICA
-					#responsive-menu
-						.top-bar-right
-							ul.menu
-								li
-									a(href="#") ABOUT US
-								li
-									a(href="#") EVENTS
-								li
-									a(href="#") NEWSLETTER
-								li
-									a(href="#") GALLERY
-								li 
-									a(href="#") CONTACT
-
+			include ./menu.jade
 			block content
+			//- for the footer
+			#push 
+		include ./footer.jade
 		script(src='/javascript/app.min.js')
