@@ -24,6 +24,9 @@ div#container {
 			margin: 0 auto;
 			.top-bar-title {
 				color: $white;
+				font-weight: 600;
+				font-size: 1.75rem;
+				letter-spacing: 0.3rem
 			}
 			ul {
 				background-color: map-get($foundation-palette, primary);
@@ -31,9 +34,13 @@ div#container {
 					height: $menu_height;
 					a {
 						color: $white;
+						&:hover {
+							color: map-get($foundation-palette, primary);
+							transition: color 0.5s;
+						}
 					}
 					&:hover {
-						background-color: map-get($foundation-palette, primary-lighter);
+						background-color: $white;
 						transition: background-color 0.5s;
 					}
 				}
