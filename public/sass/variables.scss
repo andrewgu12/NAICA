@@ -1,0 +1,18 @@
+// color palette
+$foundation-palette: (
+  primary: #F06D64,
+  primary-lighter: #F08D86,
+  secondary: #777,
+  success: #3adb76,
+  warning: #ffae00,
+  alert: #ec5840,
+);
+
+$topbar-background: map-get($foundation-palette, primary);
+
+// converts to ~960px
+$inner_width: 60rem;
+// converts to ~150 px
+$menu_height: 5.625rem;
+// converts to ~60px
+$footer_height: 3.75rem;
