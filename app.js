@@ -13,7 +13,7 @@ var app    = express();
 
 // mongoDB connection
 var configDB = require('./config/connection');
-// mongoose.connect(configDB.url);
+mongoose.connect(configDB.url);
 
 
 // view engine setup
