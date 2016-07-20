@@ -28,10 +28,11 @@ div#container {
 				font-size: 1.75rem;
 				letter-spacing: 0.3rem
 			}
-			ul {
+			ul.menu {
 				background-color: map-get($foundation-palette, primary);
-				li {
+				li.menu-item {
 					height: $menu_height;
+					color: $white;
 					a {
 						color: $white;
 						&:hover {
@@ -41,7 +42,11 @@ div#container {
 					}
 					&:hover {
 						background-color: $white;
-						transition: background-color 0.5s;
+						transition: background-color 0.5s; 
+						a {
+							color: map-get($foundation-palette, primary);
+							transition: color 0.5s;
+						}
 					}
 				}
 			}
@@ -60,7 +65,7 @@ footer {
 		width: $inner_width;
 		margin: 0 auto;
 		a {
-			margin-left: 10px; 
+			margin-left: $footer_spacing; 
 			line-height: $footer_height;
 			&:hover {
 				border-bottom: 1px dotted map-get($foundation-palette, primary-lighter);
