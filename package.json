@@ -17,6 +17,7 @@
     "express": "~4.13.4",
     "foundation-sites": "^6.2.3",
     "jade": "~1.11.0",
+    "mongoose": "^4.5.5",
     "morgan": "~1.7.0",
     "react": "^15.2.0",
     "react-dom": "^15.2.0",

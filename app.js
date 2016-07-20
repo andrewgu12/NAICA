@@ -1,13 +1,20 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
+var express      = require('express');
+var path         = require('path');
+var favicon      = require('serve-favicon');
+var logger       = require('morgan');
 var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var coffeeSript = require('coffee-script/register');
+var bodyParser   = require('body-parser');
+var mongoose     = require('mongoose');
+var coffeeSript  = require('coffee-script/register');
 
+// routes
 var routes = require('./routes/index');
-var app = express();
+var app    = express();
+
+// mongoDB connection
+var configDB = require('./config/connection');
+mongoose.connect(configDB.url);
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
