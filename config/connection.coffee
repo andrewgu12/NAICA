@@ -1,3 +1,4 @@
+# MongoDB connection
 connectionURL = ''
 
 if process.env.NODE_ENV == 'production'
