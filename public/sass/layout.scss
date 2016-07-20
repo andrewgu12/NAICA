@@ -43,6 +43,7 @@ div#container {
 					&:hover {
 						background-color: $white;
 						transition: background-color 0.5s; 
+						// turn the link to the primary color when hovering over outside block
 						a {
 							color: map-get($foundation-palette, primary);
 							transition: color 0.5s;
