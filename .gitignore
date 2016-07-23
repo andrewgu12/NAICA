@@ -4,3 +4,5 @@ bower_components/
 
 # ignore the mockup file
 *.pdf
+# ignore Illustrator files
+*.ai
