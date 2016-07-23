@@ -4569,22 +4569,31 @@ div#container .top-bar .top-bar_container .top-bar-title {
   font-size: 1.75rem;
   letter-spacing: 0.3rem;
 }
-div#container .top-bar .top-bar_container ul {
+div#container .top-bar .top-bar_container .top-bar-title img#naica-logo {
+  height: 2.5rem;
+  margin: 0 0.5rem 0.3rem 0;
+}
+div#container .top-bar .top-bar_container ul.menu {
   background-color: #F06D64;
 }
-div#container .top-bar .top-bar_container ul li {
+div#container .top-bar .top-bar_container ul.menu li.menu-item {
   height: 5.625rem;
-}
-div#container .top-bar .top-bar_container ul li a {
   color: #fefefe;
 }
-div#container .top-bar .top-bar_container ul li a:hover {
+div#container .top-bar .top-bar_container ul.menu li.menu-item a {
+  color: #fefefe;
+}
+div#container .top-bar .top-bar_container ul.menu li.menu-item a:hover {
   color: #F06D64;
   transition: color 0.5s;
 }
-div#container .top-bar .top-bar_container ul li:hover {
+div#container .top-bar .top-bar_container ul.menu li.menu-item:hover {
   background-color: #fefefe;
   transition: background-color 0.5s;
+}
+div#container .top-bar .top-bar_container ul.menu li.menu-item:hover a {
+  color: #F06D64;
+  transition: color 0.5s;
 }
 
 #push, footer {
@@ -4593,12 +4602,12 @@ div#container .top-bar .top-bar_container ul li:hover {
 
 footer div#footer_inner {
   height: 3.75rem;
-  border-top: 1px solid #F06D64;
   width: 60rem;
+  border-top: 1px solid #F06D64;
   margin: 0 auto;
 }
 footer div#footer_inner a {
-  margin-left: 10px;
+  margin-left: 1.25rem;
   line-height: 3.75rem;
 }
 footer div#footer_inner a:hover {
