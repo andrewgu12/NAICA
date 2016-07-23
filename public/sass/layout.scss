@@ -42,7 +42,7 @@ div#container {
 					}
 					&:hover {
 						background-color: $white;
-						transition: background-color 0.5s; 
+						transition: background-color 0.5s;
 						// turn the link to the primary color when hovering over outside block
 						a {
 							color: map-get($foundation-palette, primary);
@@ -62,11 +62,11 @@ div#container {
 footer {
 	div#footer_inner {
 		height: $footer_height;
-		border-top: 1px solid map-get($foundation-palette, primary);
 		width: $inner_width;
+		border-top: 1px solid map-get($foundation-palette, primary);
 		margin: 0 auto;
 		a {
-			margin-left: $footer_spacing; 
+			margin-left: $footer_spacing;
 			line-height: $footer_height;
 			&:hover {
 				border-bottom: 1px dotted map-get($foundation-palette, primary-lighter);
