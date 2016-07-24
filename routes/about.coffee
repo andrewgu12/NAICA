@@ -9,6 +9,6 @@ router.get '/', (req, res, next) ->
   res.render 'index', title: 'NAICA'
 
 router.get '/about', (req, res, next) ->
-  res.render 'about/table', title: 'NAICA'
+  res.render 'about/table', title: 'About Us | NAICA'
 
 module.exports = router
