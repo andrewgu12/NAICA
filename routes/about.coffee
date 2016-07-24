@@ -8,5 +8,4 @@ router = express.Router()
 router.get '/', (req, res, next) ->
   res.render 'about/table', title: 'About Us | NAICA'
 
-
 module.exports = router
