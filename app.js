@@ -32,13 +32,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
 app.use('/', routes);
-<<<<<<< 5b6a0bfa79fa776ae9394c9bb0b6a51e6d568583
 app.use('/events', events);
-
-
-=======
 app.use('/about',about);
->>>>>>> feature(aboutus): set up about route
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
