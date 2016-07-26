@@ -15,8 +15,12 @@ div#container {
 	width: 100%;
 
 	div#inner-container {
-		width: $inner_width;
+		width: $inner_width_container;
 		margin: 0 auto;
+		.title {
+			border-bottom: 1px dotted map-get($foundation-palette, primary);
+			margin: 1rem 0;
+		}
 	}
 }
 

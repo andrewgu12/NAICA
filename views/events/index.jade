@@ -1,4 +1,10 @@
 extends ../layout
 
 block content
-	p This is the events page
+	div(class="row", id="events-page")
+		div(class="large-6 columns")
+			h2 Upcoming NAICA Events
+			!{naicaEvents}
+		div(class="large-6 columns")
+			h2 Upcoming Community Events
+			!{commEvents}

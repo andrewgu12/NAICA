@@ -4554,8 +4554,12 @@ div#container {
   width: 100%;
 }
 div#container div#inner-container {
-  width: 60rem;
+  width: 62rem;
   margin: 0 auto;
+}
+div#container div#inner-container .title {
+  border-bottom: 1px dotted #F06D64;
+  margin: 1rem 0;
 }
 
 #push, footer {
@@ -4626,4 +4630,40 @@ footer div#footer_inner .right {
 .top-bar .top-bar_container ul.menu li.menu-item:hover a {
   color: #F06D64;
   transition: color 0.5s;
+}
+
+#events-page .large-6 {
+  width: 47.5%;
+}
+#events-page .large-6 h2 {
+  color: #F06D64;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 3rem 0 0.25rem 0;
+}
+#events-page .event-box {
+  border: 1px solid #F06D64;
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+#events-page .event-box p {
+  line-height: 1.2;
+}
+#events-page .event-box p.event-info {
+  margin: 0.5rem 0 0.5rem 0;
+}
+#events-page .event-box p.event-description {
+  margin-bottom: 0.5rem;
+}
+#events-page .event-box h3 {
+  color: #F06D64;
+  font-size: 1.25rem;
+}
+#events-page .event-box .buttons-column {
+  margin-top: 0.5rem;
+}
+#events-page .event-box .buttons-column .button {
+  width: 8rem;
+  font-weight: 600;
+  height: 3rem;
 }
