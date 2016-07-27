@@ -4605,7 +4605,10 @@ footer div#footer_inner .right {
   font-size: 1.75rem;
   letter-spacing: 0.3rem;
 }
-.top-bar .top-bar_container .top-bar-title img#naica-logo {
+.top-bar .top-bar_container .top-bar-title a {
+  color: #fefefe;
+}
+.top-bar .top-bar_container .top-bar-title a img#naica-logo {
   height: 2.5rem;
   margin: 0 0.5rem 0.3rem 0;
 }
