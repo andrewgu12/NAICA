@@ -1,4 +1,36 @@
-extends layout
-
-block content
-	
+doctype html
+html
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		title= title
+		meta(name='description', content='')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		link(rel='stylesheet', href='/stylesheets/library.css')
+	body
+		#container
+			include ./menu.jade
+			div(class="orbit homepage-slideshow" role="region" data-orbit)
+				ul(class="orbit-container")
+					button(class="orbit-previous")
+						| &#9664;&#xFE0E;
+					button(class="orbit-next")
+						| &#9654;&#xFE0E;
+					li(class="is-active orbit-slide")
+						img(src="/images/NAICA1.jpg" class="orbit-image" alt="slide 1")
+					li(class="orbit-slide")
+						img(src="/images/NAICA2.jpg" class="orbit-image" alt="slide 2")
+			#inner-container
+				div(class="row")
+					div(class="large-3 columns")
+						p Lorem ipsum dolor sit amet, sit vitae dignissim elit viverra varius blandit, neque sollici- tudin sed elit. Vestibulum odio et sit montes,
+					div(class="large-3 columns")
+						p Lorem ipsum dolor sit amet, sit vitae dignissim elit viverra varius blandit, neque sollici- tudin sed elit. Vestibulum odio et sit montes,
+					div(class="large-3 columns")
+						p Lorem ipsum dolor sit amet, sit vitae dignissim elit viverra varius blandit, neque sollici- tudin sed elit. Vestibulum odio et sit montes,
+					div(class="large-3 columns")
+						p Lorem ipsum dolor sit amet, sit vitae dignissim elit viverra varius blandit, neque sollici- tudin sed elit. Vestibulum odio et sit montes,
+			//- for the footer
+			#push 
+		include ./footer.jade
+		script(src='/javascript/app.min.js')
