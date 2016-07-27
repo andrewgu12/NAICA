@@ -15,10 +15,17 @@ var EventInformation = React.createClass({
 	}
 });
 
+var EventButton = React.createClass({
+	render: function() {
+	 	if (this.props.url === '') 
+	 		return <a href="#" disabled className="button">{this.props.buttonText}</a>;
+	 	else 
+			return <a href={this.props.url} className="button" target="_blank">{this.props.buttonText}</a>;
+	}
+});
+
 var EventBox = React.createClass({
 	render: function() {
-		var rsvpButton = (this.props.event.rsvpLink === '') ? (<a href="#" disabled className="button">RSVP</a>) : (<a href={this.props.rsvpLink} className="button">RSVP</a>),
-			infoButton = (this.props.event.moreInfo === '') ? (<a href="#" disabled className="button">More Info</a>) : (<a href={this.props.moreInfo} className="button">More Info</a>);
 	    return (
 	      <div className="event-box row">
 	      	<div className="large-8 columns">
@@ -27,7 +34,8 @@ var EventBox = React.createClass({
 		        <p className="event-description">{this.props.event.description}</p>
 		    </div>
 		    <div className="large-4 columns buttons-column">
-		    	{rsvpButton}<br />{infoButton}
+		    	<EventButton buttonText="RSVP" url={this.props.event.rsvpLink} /> <br />
+		    	<EventButton buttonText="More Info" url={this.props.event.moreInfo} />
 		    </div>
 	      </div>
 	    );

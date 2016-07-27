@@ -26,7 +26,7 @@ router.get '/', (req, res, next) ->
 		naicaEvents = ReactDOMServer.renderToString(React.createElement(EventsList, {events: naicaEvents}))
 
 		res.render 'events/index', title: 'Events | NAICA', commEvents: commEvents, naicaEvents: naicaEvents
-	).where('eventDate').gte(todayDate) # only get current + future events
+	).where('eventDate').gte(todayDate).sort({eventDate: 1}) # only get current + future events
 
 # Add a new event
 router.get '/add', (req, res, next) ->
@@ -39,7 +39,8 @@ router.post '/', (req, res, next) ->
 	dateStamp   = moment(req.body.event_date).unix()
 	startTime   = req.body.event_time_start
 	endTime     = req.body.event_time_end
-	rsvpLink    = req.body.rsvp_link
+	rsvpLink    = req.body.event_rsvp_link
+	moreInfo    = req.body.event_more_info
 	description = req.body.event_description
 	naicaEvent  = (req.body.event_group == 'NAICA') ? true : false
 
@@ -52,6 +53,7 @@ router.post '/', (req, res, next) ->
 		title         : title
 		description   : description
 		rsvpLink      : rsvpLink
+		moreInfo 	  : moreInfo
 		naicaEvent 	  : naicaEvent
 	)
 
