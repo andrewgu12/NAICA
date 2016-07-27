@@ -1,0 +1,40 @@
+$event-box-top-margin: 0.5rem;
+
+#events-page {
+	.large-6 {
+		width: 47.5%;
+		h2 {
+			color: map-get($foundation-palette, primary);
+			font-weight: 600;
+			font-size: 1.5rem;
+			margin: 3rem 0 0.25rem 0;
+		}
+	}
+	.event-box {
+		border: 1px solid map-get($foundation-palette, primary);
+		padding: 0.5rem;
+		margin-bottom: 1.5rem;
+		p {
+			line-height: 1.2;
+			&.event-info {
+				margin: $event-box-top-margin 0 0.5rem 0;
+			}
+			&.event-description {
+				margin-bottom: 0.5rem;
+			}
+		}
+		h3 {
+			color: map-get($foundation-palette, primary);
+			font-size: 1.25rem;
+		}
+		.buttons-column {
+			margin-top: $event-box-top-margin;
+			.button {
+				width: 8rem;
+				font-weight: 600;
+				height: 3rem;
+				line-height: 1.5rem;          
+			}
+		}
+	}
+}

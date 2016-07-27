@@ -1,0 +1,50 @@
+extends ../layout
+
+block content
+	.title
+		h3 Add an Event
+	form(id="add_event", action="/events", method="post")
+		div.row
+			div(class="large-6 columns")
+				label(for="event_title") Event Name 
+					input(id="event_title", name="event_title", type="text",placeholder="Lunar Banquet")
+			div(class="large-4 columns")
+				label(for="event_location") Event Location
+					input(id="event_location", name="event_location", type="text", placeholder="UMD Colony Ballroom")
+			div(class="large-2 columns")
+				label(for="event_group") Event Organizer
+					select(id="event_group", name="event_group")
+						option(value="NAICA") 
+							| NAICA
+						option(value="other")
+							| Other 
+		div.row
+			div(class="large-4 columns")
+				label(for="event_date") Event Date
+					input(id="event_date", name="event_date", type="date", placeholder="12/12/12")
+			div(class="large-8 columns")
+				label(for="time") Event Time
+					div.row
+						div(class="large-6 columns")
+							//- don't stick this in parent div - it'll make it 100% of the remaining width
+							div.input-group
+								span(class="input-group-label") Start
+								input(id="event_time_start", name="event_time_start", class="input-group-field", type="time", placeholder="6:00pm")
+						div(class="large-6 columns")
+							div.input-group
+								span(class="input-group-label") End
+								input(id="event_time_end", name="event_time_end", class="input-group-field", type="time", placeholder="8:00pm")
+			
+		div.row
+			div(class="large-12 columns")
+				label(for="event_rsvp_link") RSVP Link
+					input(id="event_rsvp_link", name="event_rsvp_link", type="url", placeholder="http://google.com")
+		div.row
+			div(class="large-12 columns")
+				label(for="event_more_info") Social Media Link (for more info)
+					input(id="event_more_info", name="event_more_info", type="url", placeholder="http://facebook.com/123")
+		div.row
+			div(class="large-12 columns")
+				label(for="event_description") Description
+					textarea(placeholder="This event celebrates the Chinese New Year.", name="event_description", id="event_description")
+		input(type="submit", class="button float-right", value="Submit")
