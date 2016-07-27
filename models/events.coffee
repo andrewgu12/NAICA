@@ -2,7 +2,7 @@ mongoose = require('mongoose')
 Schema   = mongoose.Schema
 moment   = require('moment')
 
-# today's date
+# today
 utc = new Date().toJSON().slice(0, 10)
 todayTimeStamp = moment(utc).unix()
 
@@ -14,6 +14,7 @@ eventSchema = new Schema(
 	title         : { type: String,  default: ''             }
 	description   : { type: String,  default: ''             }
 	rsvpLink      : { type: String,  default: ''             }
+	moreInfo      : { type: String,  default: '' 			 }
 	naicaEvent    : { type: Boolean, default: false          }
 )
 
