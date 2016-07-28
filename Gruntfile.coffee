@@ -19,7 +19,7 @@ module.exports = (grunt) ->
         compress: false
       my_target:
         files:
-          'public/javascript/app.min.js' : ['bower_components/jquery/dist/jquery.js', 'public/javascript/modernizr.js', 'bower_components/foundation-sites/dist/foundation.js','public/javascript/library.js']
+          'public/javascript/app.min.js' : ['bower_components/jquery/dist/jquery.js', 'public/javascript/modernizr.js', 'bower_components/foundation-sites/dist/foundation.js', 'public/javascript/library.js']
     watch:
       styles:
         files: 'public/sass/*.scss'

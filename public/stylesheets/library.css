@@ -4635,6 +4635,23 @@ footer div#footer_inner .right {
   transition: color 0.5s;
 }
 
+#homepage-container {
+  background: url(../images/NAICA2.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#homepage-container form#submit_email {
+  position: absolute;
+  bottom: 3rem;
+}
+#homepage-container form#submit_email label {
+  color: #fefefe;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
 #events-page .large-6 {
   width: 47.5%;
 }
