@@ -4719,3 +4719,11 @@ footer div#footer_inner .right {
 .description-header {
   font-size: 75%;
 }
+
+.director-container {
+  border-collapse: separate;
+}
+
+.director {
+  width: 25%;
+}
