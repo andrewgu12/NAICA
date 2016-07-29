@@ -4691,8 +4691,9 @@ footer div#footer_inner .right {
 
 #about-box {
   padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
   overflow: auto;
+  border-bottom: 1px solid #F06D64;
 }
 
 #naica-about-logo {
@@ -4706,6 +4707,12 @@ footer div#footer_inner .right {
   width: 70%;
   float: right;
   padding-left: 5%;
+}
+
+#director-container {
+  padding-top: 50px;
+  overflow: auto;
+  padding-bottom: 100px;
 }
 
 .description-title {
@@ -4723,7 +4730,6 @@ footer div#footer_inner .right {
 
 .director-row {
   overflow: auto;
-  padding-bottom: 100px;
 }
 
 .director-container {

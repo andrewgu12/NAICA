@@ -1,7 +1,8 @@
 #about-box {
 	padding-top: 100px;
-	padding-bottom: 100px;
+	padding-bottom: 50px;
 	overflow:auto;
+	border-bottom: 1px solid map-get($foundation-palette, primary);
 }
 #naica-about-logo {
 	width: 30%;
@@ -13,6 +14,12 @@
 	width:70%;
 	float: right;
 	padding-left:5%;
+
+}
+#director-container{
+	padding-top: 50px;
+	overflow: auto;
+	padding-bottom: 100px;
 
 }
 .description-title{
@@ -27,7 +34,6 @@
 }
 .director-row{
 	overflow: auto;
-	padding-bottom:100px
 }
 .director-container{
 	border-collapse: separate;
