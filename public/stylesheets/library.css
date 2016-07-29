@@ -4692,6 +4692,7 @@ footer div#footer_inner .right {
 #about-box {
   padding-top: 100px;
   padding-bottom: 100px;
+  overflow: auto;
 }
 
 #naica-about-logo {
@@ -4720,10 +4721,60 @@ footer div#footer_inner .right {
   font-size: 75%;
 }
 
+.director-row {
+  overflow: auto;
+  padding-bottom: 100px;
+}
+
 .director-container {
   border-collapse: separate;
 }
 
+.director-profile {
+  height: 200px;
+  width: 75%;
+  position: relative;
+}
+
+.director-hover {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  height: 200px;
+  opacity: 0;
+  z-index: 10;
+}
+
+.director-description {
+  height: 60%;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.7);
+  overflow: scroll;
+}
+
+.director-hover:hover {
+  animation: description-fade 1s;
+  opacity: 1;
+}
+
+@keyframes description-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .director {
   width: 25%;
+  position: relative;
+  text-align: center;
+  overflow: auto;
+  float: left;
 }

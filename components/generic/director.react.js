@@ -3,32 +3,21 @@ var React = require('react');
 var DirectorTextBox = React.createClass({
 	// Arguments passed in: Description
 	render: function() {
-		var text = {this.props.description};
-		return <div></div>;
+		return <div className='director-hover'><div className='director-description'>{this.props.description}</div></div>;	
 	}
 })
 
-DirectorTextBox.styles = {
-	scrollbox: {
-		// Place CSS animation for entering here
-	}
-}
-
-var Director = React.createClass({
+var DirectorBox = React.createClass({
 	// Arguments passed in: Name, Description, Image
 	render: function() {
 		return (
-			<div>
-				<img src={this.props.profile}>
-				<DirectorTextBox description={this.props.description}>
-			</div>)
+			<div className="director">
+				<img className="director-profile" src={this.props.director.imgSource}></img>
+				<DirectorTextBox description={this.props.director.description} />
+			</div>
+		);
 
-	}
-	mouseOver: function() {
-		// Change DirectorTextBox display
-
-	} 
-	mouseOut: function() {
-		// Change DirectorTextBox display to none
 	}
 });
+
+module.exports = DirectorBox;
