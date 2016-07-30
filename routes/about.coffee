@@ -32,7 +32,11 @@ router.get '/', (req, res, next) ->
 		imgSource : '/images/logo_red.png'
 		title : 'Test Title'
 	)
-	directorBox = ReactDOMServer.renderToString(React.createElement(DirectorBox, {director: testDirector}))
-	res.render 'about/table', title: 'About Us | NAICA', director: directorBox
+	directorBox1 = ReactDOMServer.renderToString(React.createElement(DirectorBox, {director: testDirector}))
+	directorBox2 = ReactDOMServer.renderToString(React.createElement(DirectorBox, {director: testDirector}))
+	directorBox3 = ReactDOMServer.renderToString(React.createElement(DirectorBox, {director: testDirector}))
+	directorBox4 = ReactDOMServer.renderToString(React.createElement(DirectorBox, {director: testDirector}))
+
+	res.render 'about/table', title: 'About Us | NAICA', director1: directorBox1, director2: directorBox2
 
 module.exports = router
