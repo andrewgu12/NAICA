@@ -4553,11 +4553,11 @@ div#container {
   margin: 0 auto -3.75rem;
   width: 100%;
 }
-div#container div#inner-container {
+div#container div.inner-container {
   width: 62rem;
   margin: 0 auto;
 }
-div#container div#inner-container .title {
+div#container div.inner-container .title {
   border-bottom: 1px dotted #F06D64;
   margin: 1rem 0;
 }
@@ -4566,25 +4566,25 @@ div#container div#inner-container .title {
   height: 3.75rem;
 }
 
-footer div#footer_inner {
+footer div.footer_inner {
   height: 3.75rem;
   width: 60rem;
   border-top: 1px solid #F06D64;
   margin: 0 auto;
 }
-footer div#footer_inner a {
+footer div.footer_inner a {
   margin-left: 1.25rem;
   line-height: 3.75rem;
 }
-footer div#footer_inner a:hover {
+footer div.footer_inner a:hover {
   border-bottom: 1px dotted #F08D86;
   transition: border-bottom 0.5s;
 }
-footer div#footer_inner p {
+footer div.footer_inner p {
   color: #F06D64;
   line-height: 3.75rem;
 }
-footer div#footer_inner .right {
+footer div.footer_inner .right {
   text-align: right;
   padding-right: 0;
 }
@@ -4687,4 +4687,14 @@ footer div#footer_inner .right {
   font-weight: 600;
   height: 3rem;
   line-height: 1.5rem;
+}
+
+div#container div#admin-container_login {
+  margin-top: 10rem;
+  width: 40rem;
+}
+
+div#footer-admin {
+  text-align: center;
+  line-height: 3.75rem;
 }

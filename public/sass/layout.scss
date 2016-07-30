@@ -14,7 +14,7 @@ div#container {
 	margin: 0 auto (-$footer_height);
 	width: 100%;
 
-	div#inner-container {
+	div.inner-container {
 		width: $inner_width_container;
 		margin: 0 auto;
 		.title {
@@ -29,7 +29,7 @@ div#container {
 }
 
 footer {
-	div#footer_inner {
+	div.footer_inner {
 		height: $footer_height;
 		width: $inner_width;
 		border-top: 1px solid map-get($foundation-palette, primary);

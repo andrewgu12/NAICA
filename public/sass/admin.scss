@@ -1,0 +1,12 @@
+div#container {
+	// wrap it in container otherwise class takes precedence
+	div#admin-container_login {
+		margin-top: 10rem;
+		width: 40rem;
+	}
+}
+
+div#footer-admin {
+	text-align: center;
+	line-height: $footer_height;
+}
