@@ -10,6 +10,11 @@ var coffeeSript  = require('coffee-script/register');
 // routes
 var routes = require('./routes/index');
 var events = require('./routes/events');
+var about = require('./routes/about');
+<<<<<<< 8d3df92cdcc0809e3b5bb764c602cab07e7330d2
+
+=======
+>>>>>>> feature(aboutus): set up about route
 var app    = express();
 
 // mongoDB connection
@@ -31,7 +36,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Routes
 app.use('/', routes);
 app.use('/events', events);
-
+app.use('/about',about);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
