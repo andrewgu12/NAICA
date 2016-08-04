@@ -11,6 +11,8 @@ var coffeeSript  = require('coffee-script/register');
 var routes = require('./routes/index');
 var events = require('./routes/events');
 var admin  = require('./routes/admin');
+var about = require('./routes/about');
+
 var app    = express();
 
 // mongoDB connection
@@ -33,7 +35,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/events', events);
 app.use('/admin', admin);
-
+app.use('/about',about);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

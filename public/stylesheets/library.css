@@ -4553,11 +4553,11 @@ div#container {
   margin: 0 auto -3.75rem;
   width: 100%;
 }
-div#container div.inner-container {
+div#container div#inner-container {
   width: 62rem;
   margin: 0 auto;
 }
-div#container div.inner-container .title {
+div#container div#inner-container .title {
   border-bottom: 1px dotted #F06D64;
   margin: 1rem 0;
 }
@@ -4697,4 +4697,100 @@ div#container div#admin-container_login {
 div#footer-admin {
   text-align: center;
   line-height: 3.75rem;
+}
+
+#about-box {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  overflow: auto;
+  border-bottom: 1px solid #F06D64;
+}
+
+#naica-about-logo {
+  width: 30%;
+  padding: 2%;
+  margin-top: 2%;
+  float: left;
+}
+
+#naica-description {
+  width: 70%;
+  float: right;
+  padding-left: 5%;
+}
+
+#director-container {
+  padding-top: 50px;
+  overflow: auto;
+  padding-bottom: 100px;
+}
+
+.description-title {
+  font-size: 125%;
+  color: #F06D64;
+}
+
+.description-text {
+  font-size: 75%;
+}
+
+.description-header {
+  font-size: 75%;
+}
+
+.director-row {
+  overflow: auto;
+}
+
+.director-container {
+  border-collapse: separate;
+}
+
+.director-profile {
+  height: 200px;
+  width: 75%;
+  position: relative;
+}
+
+.director-hover {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  height: 200px;
+  opacity: 0;
+  z-index: 10;
+}
+
+.director-description {
+  height: 60%;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.7);
+  overflow: scroll;
+}
+
+.director-hover:hover {
+  animation: description-fade 1s;
+  opacity: 1;
+}
+
+@keyframes description-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.director {
+  width: 25%;
+  position: relative;
+  text-align: center;
+  overflow: auto;
+  float: left;
 }

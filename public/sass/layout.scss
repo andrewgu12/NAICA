@@ -14,7 +14,7 @@ div#container {
 	margin: 0 auto (-$footer_height);
 	width: 100%;
 
-	div.inner-container {
+	div#inner-container {
 		width: $inner_width_container;
 		margin: 0 auto;
 		.title {
