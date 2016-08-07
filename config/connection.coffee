@@ -8,7 +8,11 @@ else
 
 
 # session secret
-sessionSecret = 'O#jRXBi3*oyoqIs7mR'
+if process.env.NODE_ENV == 'production'
+	sessionSecret = process.env.SESSION_SECRET
+else
+	sessionSecret = 'naicaforlife'
+
 
 module.exports = 
 	'url' : connectionURL

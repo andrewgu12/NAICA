@@ -1,6 +1,7 @@
-express = require('express')
+express  = require('express')
+Event    = require('../models/events')
 passport = require('../config/passport')
-router  = express.Router()
+router   = express.Router()
 
 isLoggedIn = (req, res, next) ->
 	return next() if req.isAuthenticated()
@@ -14,10 +15,45 @@ router.get '/', isLoggedIn, (req, res, next) ->
 router.get '/login', (req, res, next) ->
 	res.render 'admin/login', title: 'Login | NAICA'
 
+# events creation
 router.get '/events/add', isLoggedIn, (req, res, next) ->
- 	res.render 'admin/add_event', title: 'Add an Event | NAICA'
+ 	res.render 'admin/events/add_event', title: 'Add an Event | NAICA'
 
-router.get '/signup', (req, res, next) ->
+router.post '/events/add', isLoggedIn, (req, res, next) ->
+	title       = req.body.event_title
+	location    = req.body.event_location
+	dateStamp   = moment(req.body.event_date).unix()
+	startTime   = req.body.event_time_start
+	endTime     = req.body.event_time_end
+	rsvpLink    = req.body.event_rsvp_link
+	moreInfo    = req.body.event_more_info
+	description = req.body.event_description
+	naicaEvent  = req.body.event_group == 'NAICA'
+
+	# create a new event object
+	event = new Event(
+		eventDate     : dateStamp
+		eventTimeStart: startTime
+		eventTimeEnd  : endTime
+		location      : location
+		title         : title
+		description   : description
+		rsvpLink      : rsvpLink
+		moreInfo 	  : moreInfo
+		naicaEvent 	  : naicaEventchi
+	)
+
+	event.save (err, savedEvent) ->
+		if err
+			throw err
+		res.redirect '/admin/events/success'
+
+router.get '/events/success', isLoggedIn, (req, res, next) ->
+	res.render 'admin/add_success', title: 'Event Added Succesfully | NAICA'
+# End events creation
+
+
+router.get '/signup', isLoggedIn, (req, res, next) ->
 	res.render 'admin/signup', title: 'Create a new Admin User | NAICA'
 
 router.post '/signup', passport.authenticate('signup'
