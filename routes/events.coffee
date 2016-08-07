@@ -28,9 +28,9 @@ router.get '/', (req, res, next) ->
 		res.render 'events/index', title: 'Events | NAICA', commEvents: commEvents, naicaEvents: naicaEvents
 	).where('eventDate').gte(todayDate).sort({eventDate: 1}) # only get current + future events
 
-# Add a new event
-router.get '/add', (req, res, next) ->
-	res.render 'events/add_event', title: 'Add an Event | NAICA'
+# # Add a new event
+# router.get '/add', (req, res, next) ->
+# 	res.render 'events/add_event', title: 'Add an Event | NAICA'
 
 # send in an event
 router.post '/', (req, res, next) -> 
@@ -42,7 +42,7 @@ router.post '/', (req, res, next) ->
 	rsvpLink    = req.body.event_rsvp_link
 	moreInfo    = req.body.event_more_info
 	description = req.body.event_description
-	naicaEvent  = (req.body.event_group == 'NAICA') ? true : false
+	naicaEvent  = req.body.event_group == 'NAICA'
 
 	# create a new event object
 	event = new Event(

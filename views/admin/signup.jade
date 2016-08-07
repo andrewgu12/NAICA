@@ -1,0 +1,13 @@
+extends layout
+
+block content
+	form(id="admin-signup", actions="/admin/signup", method="post")
+		div(class="row")
+			div(class="large-12 columns")
+				label Email
+					input(type="text", name="email", placeholder="username")
+		div(class="row")
+			div(class="large-12 columns")
+				label Password
+					input(type="password", name="password", placeholder="1234567890")
+		input(type="submit", class="button float-right", value="Create")

@@ -1,0 +1,29 @@
+doctype html
+html
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		title= title
+		meta(name='description', content='')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		link(rel='stylesheet', href='/stylesheets/library.css')
+	body
+		#container
+			include ./menu-empty.jade
+			div(class="inner-container row", id="admin-container_login")
+				div(class="large-8 columns")
+					form(id="admin-login", actions="/admin/login", method="post")
+						div(class="row")
+							div(class="large-12 columns")
+								label Username
+									input(type="text", name="email", placeholder="username")
+						div(class="row")
+							div(class="large-12 columns")
+								label Password
+									input(type="password", name="password", placeholder="1234567890")
+						input(type="submit", class="button float-right", value="Login")
+
+			//- for the footer
+			#push 
+		include ./footer.jade
+		script(src='/javascript/app.min.js')

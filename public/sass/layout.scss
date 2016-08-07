@@ -29,7 +29,7 @@ div#container {
 }
 
 footer {
-	div#footer_inner {
+	div.footer_inner {
 		height: $footer_height;
 		width: $inner_width;
 		border-top: 1px solid map-get($foundation-palette, primary);
