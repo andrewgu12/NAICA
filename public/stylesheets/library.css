@@ -4694,6 +4694,12 @@ div#container div#admin-container_login {
   width: 40rem;
 }
 
+form#admin-signup {
+  width: 40rem;
+  margin: 0 auto;
+  margin-top: 10rem;
+}
+
 div#footer-admin {
   text-align: center;
   line-height: 3.75rem;

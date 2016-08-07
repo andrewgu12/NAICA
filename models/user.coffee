@@ -7,9 +7,7 @@ userSchema = new Schema(
 		type: String
 		unique: true
 		required: true
-	name: 
-		type: String
-		required: true
+	name: String
 	hash: String
 	salt: String
 )
@@ -21,7 +19,7 @@ userSchema.methods.setPassword = (password) ->
 
 # check if inputted password is valid
 userSchema.methods.validPassword = (password) -> 
-	hash = crypto.pbkdf2Sync(password, @salt, 1000, 64).toString(64)
+	hash = crypto.pbkdf2Sync(password, @salt, 1000, 64).toString('hex')
 	@hash == hash
 
 User = mongoose.model('User', userSchema)

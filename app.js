@@ -6,12 +6,14 @@ var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 var mongoose     = require('mongoose');
 var coffeeSript  = require('coffee-script/register');
+var expressSession = require('express-session');
+var passport = require('passport')
 
 // routes
 var routes = require('./routes/index');
 var events = require('./routes/events');
 var admin  = require('./routes/admin');
-var about = require('./routes/about');
+var about  = require('./routes/about');
 
 var app    = express();
 
@@ -30,6 +32,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(expressSession({secret: configDB.sessionSecret, saveUninitialized: true, resave: true}));
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Routes
 app.use('/', routes);

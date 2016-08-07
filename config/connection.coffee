@@ -6,4 +6,10 @@ if process.env.NODE_ENV == 'production'
 else
 	connectionURL = 'localhost:27017/NAICA_DB'
 
-module.exports = 'url' : connectionURL
+
+# session secret
+sessionSecret = 'O#jRXBi3*oyoqIs7mR'
+
+module.exports = 
+	'url' : connectionURL
+	'sessionSecret': sessionSecret
