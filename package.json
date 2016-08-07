@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
-    "dev": "nodemon ./bin/www"
+    "start": "node --harmony ./bin/www",
+    "dev": "nodemon --harmony ./bin/www"
   },
   "dependencies": {
     "babel-preset-es2015": "^6.9.0",
@@ -12,6 +12,7 @@
     "babel-register": "^6.9.0",
     "body-parser": "~1.15.1",
     "coffee-script": "^1.10.0",
+    "connect-mongo": "^1.3.2",
     "cookie-parser": "~1.4.3",
     "debug": "~2.2.0",
     "express": "~4.13.4",

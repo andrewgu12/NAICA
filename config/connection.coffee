@@ -15,5 +15,5 @@ else
 
 
 module.exports = 
-	'url' : connectionURL
+	'url'          : connectionURL
 	'sessionSecret': sessionSecret

@@ -1,15 +1,17 @@
 express  = require('express')
+moment   = require('moment')
 Event    = require('../models/events')
 passport = require('../config/passport')
 router   = express.Router()
 
 isLoggedIn = (req, res, next) ->
+	console.log 'is loggedin function'
 	return next() if req.isAuthenticated()
 	res.redirect '/admin/login'
 	return
 
 router.get '/', isLoggedIn, (req, res, next) ->
-	console.log('admin panel')
+	console.log 'admin Panel'
 	res.render 'admin/index', title: 'Admin Panel | NAICA'
 
 router.get '/login', (req, res, next) ->
@@ -40,7 +42,7 @@ router.post '/events/add', isLoggedIn, (req, res, next) ->
 		description   : description
 		rsvpLink      : rsvpLink
 		moreInfo 	  : moreInfo
-		naicaEvent 	  : naicaEventchi
+		naicaEvent 	  : naicaEvent
 	)
 
 	event.save (err, savedEvent) ->
@@ -49,7 +51,7 @@ router.post '/events/add', isLoggedIn, (req, res, next) ->
 		res.redirect '/admin/events/success'
 
 router.get '/events/success', isLoggedIn, (req, res, next) ->
-	res.render 'admin/add_success', title: 'Event Added Succesfully | NAICA'
+	res.render 'admin/events/add_success', title: 'Event Added Succesfully | NAICA'
 # End events creation
 
 
