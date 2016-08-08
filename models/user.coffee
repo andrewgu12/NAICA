@@ -1,11 +1,12 @@
+# User Model - schema + methods for setting and validating password
 mongoose = require('mongoose')
 Schema   = mongoose.Schema
 crypto   = require('crypto')
 
 userSchema = new Schema(
 	email: 
-		type: String
-		unique: true
+		type    : String
+		unique  : true
 		required: true
 	name: String
 	hash: String

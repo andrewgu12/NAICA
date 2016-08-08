@@ -1,9 +1,9 @@
-extends layout
+extends ../layout
 
 block content
 	.title
 		h3 Add an Event
-	form(id="add_event", action="/events", method="post")
+	form(id="add_event", action="/admin/events/add", method="post")
 		div.row
 			div(class="large-6 columns")
 				label(for="event_title") Event Name 
