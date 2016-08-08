@@ -33,11 +33,12 @@ app.use(logger('dev'));
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+// store session in sessions collection
 app.use(expressSession({
   secret: configDB.sessionSecret, 
   store: new MongoStore({mongooseConnection: mongoose.connection}),
   saveUninitialized: true, 
-  cookie: { maxAge: 2000000 },
+  cookie: { maxAge: 2000000 }, //session will expire in half an hour
   resave: true
 }));
 app.use(passport.initialize());

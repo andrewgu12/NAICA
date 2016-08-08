@@ -26,26 +26,26 @@ passport.use 'login', new LocalStrategy({
 				name : user.name
 )
 
-passport.use 'signup', new LocalStrategy({usernameField: 'email'}, (username, password, done) ->
-	console.log 'admin creation'
-	User.findOne { email: username}, (err, user) ->
-		if (user)
-			console.log 'user already exists'
-			return done(err)
-		else
-			newUser = new User()
-			newUser.email = username
-			newUser.setPassword(password)
-			newUser.save (err) ->
-				if err
-					console.log 'err: ' + err
-					throw err
-				console.log 'successful!'
-			done null,
-				id   : newUser._id
-				email: newUser.email
-				name : newUser.name
-
+passport.use 'signup', new LocalStrategy({
+		usernameField: 'email'
+	}, (username, password, done) ->
+		User.findOne { email: username}, (err, user) ->
+			if (user)
+				console.log 'user already exists'
+				return done(err)
+			else
+				newUser = new User()
+				newUser.email = username
+				newUser.setPassword(password)
+				newUser.save (err) ->
+					if err
+						console.log 'err: ' + err
+						throw err
+					console.log 'successful!'
+				done null,
+					id   : newUser._id
+					email: newUser.email
+					name : newUser.name
 )
 
 passport.serializeUser (user, done) ->

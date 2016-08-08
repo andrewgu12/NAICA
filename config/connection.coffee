@@ -1,18 +1,14 @@
 # MongoDB connection
 connectionURL = ''
+# session secret
+sessionSecret = ''
 
 if process.env.NODE_ENV == 'production'
 	connectionURL = process.env.MONGODB_URI
-else
-	connectionURL = 'localhost:27017/NAICA_DB'
-
-
-# session secret
-if process.env.NODE_ENV == 'production'
 	sessionSecret = process.env.SESSION_SECRET
 else
+	connectionURL = 'localhost:27017/NAICA_DB'
 	sessionSecret = 'naicaforlife'
-
 
 module.exports = 
 	'url'          : connectionURL

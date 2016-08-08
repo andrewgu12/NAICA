@@ -1,6 +1,4 @@
 # User Model - schema + methods for setting and validating password
-
-
 mongoose = require('mongoose')
 Schema   = mongoose.Schema
 crypto   = require('crypto')
