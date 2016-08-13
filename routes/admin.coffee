@@ -1,8 +1,12 @@
-express  = require('express')
-moment   = require('moment')
-Event    = require('../models/events')
-passport = require('../config/passport')
-router   = express.Router()
+express        = require('express')
+moment         = require('moment')
+Event          = require('../models/events')
+React          = require('react')
+ReactDOMServer = require('react-dom/server')
+EventsList     = require('../components/layouts/events_list.react')
+EventsTable    = require('../components/layouts/events_table.react')
+passport       = require('../config/passport')
+router         = express.Router()
 
 isLoggedIn = (req, res, next) ->
 	console.log 'is loggedin function'
@@ -16,6 +20,20 @@ router.get '/', isLoggedIn, (req, res, next) ->
 
 router.get '/login', (req, res, next) ->
 	res.render 'admin/login', title: 'Login | NAICA'
+
+###########
+# Events
+##########
+
+# view all events
+router.get '/events/', isLoggedIn, (req, res, next) ->
+	Event.find (err, events) ->
+		if err
+			console.err(err)
+
+		eventsTable = ReactDOMServer.renderToString(React.createElement(EventsTable, {events: events}))
+		console.log(eventsTable)
+		res.render 'admin/events/view_all', title: 'View All events', eventsTable: eventsTable
 
 # events creation
 router.get '/events/add', isLoggedIn, (req, res, next) ->
@@ -41,7 +59,7 @@ router.post '/events/add', isLoggedIn, (req, res, next) ->
 		title         : title
 		description   : description
 		rsvpLink      : rsvpLink
-		moreInfo 	  : moreInfo
+		moreInfo 	  	: moreInfo
 		naicaEvent 	  : naicaEvent
 	)
 
@@ -53,7 +71,6 @@ router.post '/events/add', isLoggedIn, (req, res, next) ->
 router.get '/events/success', isLoggedIn, (req, res, next) ->
 	res.render 'admin/events/add_success', title: 'Event Added Succesfully | NAICA'
 # End events creation
-
 
 router.get '/signup', isLoggedIn, (req, res, next) ->
 	res.render 'admin/signup', title: 'Create a new Admin User | NAICA'

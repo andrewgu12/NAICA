@@ -19,7 +19,7 @@ var about  = require('./routes/about');
 var app    = express();
 
 // mongoDB connection
-var configDB = require('./config/connection');
+var configDB = require('./config/connection.js');
 mongoose.connect(configDB.url);
 
 // view engine setup
@@ -35,10 +35,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 // store session in sessions collection
 app.use(expressSession({
-  secret: configDB.sessionSecret, 
+  secret: configDB.sessionSecret,
   store: new MongoStore({mongooseConnection: mongoose.connection}),
-  saveUninitialized: true, 
-  cookie: { maxAge: 2000000 }, //session will expire in half an hour
+  saveUninitialized: true,
+  cookie: { maxAge: 10000000 }, //session will expire in 2.5 hours
   resave: true
 }));
 app.use(passport.initialize());
