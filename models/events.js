@@ -1,3 +1,4 @@
+require('babel-register');
 const mongoose = require('mongoose');
 const Schema   = mongoose.Schema;
 const moment   = require('moment');
