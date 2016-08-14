@@ -4,7 +4,7 @@ const Schema   = mongoose.Schema;
 const directorSchema = new Schema({
   name:        {type: String, default: ''},
   description: {type: String, default: ''},
-  imgSource:   {type: String, default: ''},
+  imgSource:   {type: String, default: ''}, 
   title:       {type: String, default: ''}
 });
 

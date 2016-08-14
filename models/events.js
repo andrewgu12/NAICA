@@ -15,7 +15,7 @@ const eventSchema = new Schema({
   title         : { type: String,  default: ''             },
   description   : { type: String,  default: ''             },
   rsvpLink      : { type: String,  default: ''             },
-  moreInfo      : { type: String,  default: '' 			   },
+  moreInfo      : { type: String,  default: '' 			       },
   naicaEvent    : { type: Boolean, default: false          }
 });
 

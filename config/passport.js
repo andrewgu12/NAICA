@@ -10,6 +10,7 @@ passport.use('login-strategy', new LocalStrategy({
   usernameField: 'email',
   session:       true
 }, (username, password, done) => {
+  console.log('login strategy');
   User.findOne({
     email: username
   }, (err, user) => {

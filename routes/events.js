@@ -10,11 +10,11 @@ const EventsList     = require('../components/layouts/events_list.react');
 
 router.get('/', (req, res, next) => {
   const utc       = new Date().toJSON().slice(0, 10),
-  todayDate = moment(utc).unix();
+        todayDate = moment(utc).unix();
 
   Event.find((err, events) => {
     if (err)
-    throw err;
+      throw err;
 
     // filter for NAICA events
     let naicaEvents = events.filter((event) => {

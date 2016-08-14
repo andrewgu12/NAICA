@@ -1,26 +1,24 @@
-require('babel-register');
-const express        = require('express');
-const path           = require('path');
-const favicon        = require('serve-favicon');
-const logger         = require('morgan');
-const cookieParser   = require('cookie-parser');
-const bodyParser     = require('body-parser');
-const mongoose       = require('mongoose');
-const expressSession = require('express-session');
-const passport       = require('passport');
-const MongoStore     = require('connect-mongo')(expressSession);
+var express        = require('express');
+var path           = require('path');
+var favicon        = require('serve-favicon');
+var logger         = require('morgan');
+var cookieParser   = require('cookie-parser');
+var bodyParser     = require('body-parser');
+var mongoose       = require('mongoose');
+var expressSession = require('express-session');
+var passport       = require('passport');
+var MongoStore     = require('connect-mongo')(expressSession);
 
 // routes
-const routes      = require('./routes/index');
-const events      = require('./routes/events');
-const admin       = require('./routes/admin');
-const about       = require('./routes/about');
-const newsletters = require('./routes/newsletters');
+var routes = require('./routes/index');
+var events = require('./routes/events');
+var admin  = require('./routes/admin');
+var about  = require('./routes/about');
 
-const app = express();
+var app    = express();
 
 // mongoDB connection
-const configDB = require('./config/connection.js');
+var configDB = require('./config/connection.js');
 mongoose.connect(configDB.url);
 
 // view engine setup
@@ -50,11 +48,10 @@ app.use('/', routes);
 app.use('/events', events);
 app.use('/admin', admin);
 app.use('/about',about);
-app.use('/newsletters', newsletters);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  let err = new Error('Not Found');
+  var err = new Error('Not Found');
   err.status = 404;
   next(err);
 });

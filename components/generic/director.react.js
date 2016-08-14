@@ -3,7 +3,7 @@ var React = require('react');
 var DirectorTextBox = React.createClass({
 	// Arguments passed in: Description
 	render: function() {
-		return <div className='director-hover'><div className='director-description'>{this.props.description}</div></div>;
+		return <div className='director-hover'><div className='director-description'>{this.props.description}</div></div>;	
 	}
 })
 

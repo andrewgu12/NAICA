@@ -8,4 +8,4 @@ bower_components/
 *.ai
 
 # ignore keys file
-./config/keys.json
+config/keys.json

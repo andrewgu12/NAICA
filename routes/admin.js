@@ -9,7 +9,7 @@ const router   = express.Router();
 const isLoggedIn = (req, res, next) => {
   console.log('isLoggedIn function');
   if (req.isAuthenticated())
-  return next();
+    return next();
   res.redirect('/admin/login');
 };
 
@@ -30,15 +30,15 @@ router.get('/events/add', isLoggedIn, (req, res, next) => {
 });
 
 router.post('/events/add', isLoggedIn, (req, res, next) => {
-  const title = req.body.event_title,
-  location    = req.body.event_location,
-  dateStamp   = moment(req.body.event_date).unix(),
-  startTime   = req.body.event_time_start,
-  endTime     = req.body.event_time_end,
-  rsvpLink    = req.body.event_rsvp_link,
-  moreInfo    = req.body.event_more_info,
-  description = req.body.event_description,
-  naicaEvent  = (req.body.event_group === 'NAICA');
+  const title       = req.body.event_title,
+        location    = req.body.event_location,
+        dateStamp   = moment(req.body.event_date).unix(),
+        startTime   = req.body.event_time_start,
+        endTime     = req.body.event_time_end,
+        rsvpLink    = req.body.event_rsvp_link,
+        moreInfo    = req.body.event_more_info,
+        description = req.body.event_description,
+        naicaEvent  = (req.body.event_group === 'NAICA');
 
   // create new event object
   const event = new Event({
