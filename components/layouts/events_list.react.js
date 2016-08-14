@@ -1,7 +1,7 @@
 require('babel-register');
 
-var React = require('react');
-var EventBox = require('../generic/event.react');
+var React    = require('react');
+var EventBox = require('../generic/event_box.react');
 
 var EventsList = React.createClass({
 	render: function() {

@@ -24,6 +24,10 @@ router.get('/login', (req, res, next) => {
   res.render('admin/login', {title: 'Login | NAICA'});
 });
 
+/***********
+* Events
+**********/
+
 // events creation
 router.get('/events/add', isLoggedIn, (req, res, next) => {
   res.render('admin/events/add_event', {title: 'Add an Event | NAICA'});
@@ -65,6 +69,10 @@ router.get('/events/success', isLoggedIn, (req, res, next) => {
   res.render('admin/events/add_success', {title: 'Event Added Succesfully | NAICA'});
 });
 
+
+/**************************
+ * Login, Logout, Register
+ *************************/
 router.get('/signup', (req, res, next) => {
   res.render('admin/signup', {title: 'Create an Admin User | NAICA'});
 });
@@ -75,10 +83,15 @@ router.post('/signup', passport.authenticate('signup', {
   failureFlash: false
 }));
 
-router.post('/login', passport.authenticate('login-strategy', {
+router.post('/login', passport.authenticate('login', {
   successRedirect: '/admin',
   failureRedirect: '/admin/login',
   failureFlash: false
 }));
+
+router.get('/logout', isLoggedIn, (req, res) => {
+  req.logout();
+  res.redirect('/admin/login');
+});
 
 module.exports = router;

@@ -37,7 +37,7 @@ app.use(expressSession({
   secret: configDB.sessionSecret,
   store: new MongoStore({mongooseConnection: mongoose.connection}),
   saveUninitialized: true,
-  cookie: { maxAge: 2000000 }, //session will expire in half an hour
+  cookie: { maxAge: 10000000 }, //session will expire in 2.5 hours
   resave: true
 }));
 app.use(passport.initialize());
