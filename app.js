@@ -5,7 +5,6 @@ var logger         = require('morgan');
 var cookieParser   = require('cookie-parser');
 var bodyParser     = require('body-parser');
 var mongoose       = require('mongoose');
-var coffeeSript    = require('coffee-script/register');
 var expressSession = require('express-session');
 var passport       = require('passport');
 var MongoStore     = require('connect-mongo')(expressSession);
@@ -19,7 +18,7 @@ var about  = require('./routes/about');
 var app    = express();
 
 // mongoDB connection
-var configDB = require('./config/connection');
+var configDB = require('./config/connection.js');
 mongoose.connect(configDB.url);
 
 // view engine setup
@@ -35,9 +34,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 // store session in sessions collection
 app.use(expressSession({
-  secret: configDB.sessionSecret, 
+  secret: configDB.sessionSecret,
   store: new MongoStore({mongooseConnection: mongoose.connection}),
-  saveUninitialized: true, 
+  saveUninitialized: true,
   cookie: { maxAge: 2000000 }, //session will expire in half an hour
   resave: true
 }));
