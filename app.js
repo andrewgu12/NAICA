@@ -5,7 +5,6 @@ var logger         = require('morgan');
 var cookieParser   = require('cookie-parser');
 var bodyParser     = require('body-parser');
 var mongoose       = require('mongoose');
-var coffeeSript    = require('coffee-script/register');
 var expressSession = require('express-session');
 var passport       = require('passport');
 var MongoStore     = require('connect-mongo')(expressSession);

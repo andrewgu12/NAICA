@@ -6,10 +6,11 @@ const mongoose      = require('mongoose');
 const User          = require('../models/user');
 
 // login user
-passport.use('login', new LocalStrategy({
+passport.use('login-strategy', new LocalStrategy({
   usernameField: 'email',
   session:       true
 }, (username, password, done) => {
+  console.log('login strategy');
   User.findOne({
     email: username
   }, (err, user) => {
