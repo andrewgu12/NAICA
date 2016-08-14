@@ -6,3 +6,6 @@ bower_components/
 *.pdf
 # ignore Illustrator files
 *.ai
+
+# ignore keys file
+./config/keys.json

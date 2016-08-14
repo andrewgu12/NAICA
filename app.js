@@ -17,7 +17,7 @@ const admin       = require('./routes/admin');
 const about       = require('./routes/about');
 const newsletters = require('./routes/newsletters');
 
-const app    = express();
+const app = express();
 
 // mongoDB connection
 const configDB = require('./config/connection.js');
