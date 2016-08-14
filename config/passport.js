@@ -6,7 +6,7 @@ const mongoose      = require('mongoose');
 const User          = require('../models/user');
 
 // login user
-passport.use('login-strategy', new LocalStrategy({
+passport.use('login', new LocalStrategy({
   usernameField: 'email',
   session:       true
 }, (username, password, done) => {
