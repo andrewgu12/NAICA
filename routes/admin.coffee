@@ -1,7 +1,7 @@
 express  = require('express')
 moment   = require('moment')
 Event    = require('../models/events')
-passport = require('../config/passport')
+passport = require('../config/passport.js')
 router   = express.Router()
 
 isLoggedIn = (req, res, next) ->
@@ -55,7 +55,7 @@ router.get '/events/success', isLoggedIn, (req, res, next) ->
 # End events creation
 
 
-router.get '/signup', isLoggedIn, (req, res, next) ->
+router.get '/signup', (req, res, next) ->
 	res.render 'admin/signup', title: 'Create a new Admin User | NAICA'
 
 router.post '/signup', passport.authenticate('signup'
