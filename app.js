@@ -5,7 +5,6 @@ var logger         = require('morgan');
 var cookieParser   = require('cookie-parser');
 var bodyParser     = require('body-parser');
 var mongoose       = require('mongoose');
-var coffeeSript    = require('coffee-script/register');
 var expressSession = require('express-session');
 var passport       = require('passport');
 var MongoStore     = require('connect-mongo')(expressSession);
@@ -38,7 +37,11 @@ app.use(expressSession({
   secret: configDB.sessionSecret,
   store: new MongoStore({mongooseConnection: mongoose.connection}),
   saveUninitialized: true,
+<<<<<<< HEAD
   cookie: { maxAge: 10000000 }, //session will expire in 2.5 hours
+=======
+  cookie: { maxAge: 2000000 }, //session will expire in half an hour
+>>>>>>> bd195c8238b06a4a523bb1311f48606e5c6e7d91
   resave: true
 }));
 app.use(passport.initialize());

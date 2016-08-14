@@ -1,5 +1,4 @@
 require('babel-register');
-
 let connectionURL = '',
 		sessionSecret = '';
 
