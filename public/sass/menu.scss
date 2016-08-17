@@ -40,6 +40,23 @@
 						transition: color 0.5s;
 					}
 				}
+				ul.submenu-dropdown {
+					li {
+						color: $white;
+						text-align: center;
+						a {
+							color: $white;
+						}
+						&:hover {
+							background-color: $white;
+							transition: background-color 0.5s;
+							a {
+								color: map-get($foundation-palette, primary);
+								transition: color 0.5s;
+							}
+						}
+					}
+				}
 			}
 		}
 	}
