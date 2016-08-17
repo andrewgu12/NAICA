@@ -4720,6 +4720,14 @@ div#footer-admin {
   line-height: 3.75rem;
 }
 
+div#delete_modal div.confirm_buttons {
+  width: 15rem;
+  margin: 0 auto;
+}
+div#delete_modal div.confirm_buttons a {
+  margin-right: 1rem;
+}
+
 #about-box {
   padding-top: 100px;
   padding-bottom: 50px;

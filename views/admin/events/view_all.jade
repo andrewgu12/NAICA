@@ -2,12 +2,13 @@ extends ../layout
 
 block content
   h3 View All Events
-  
+  p(class="return_message")
+    | !{message}
   !{eventsTable}
   
   div(class="reveal", id="edit_modal", data-reveal)
-    form(id="edit_event", action="/events/edit", method="post")
-      input(id="event_id", class="hide")
+    form(id="edit_event", action="/admin/events/edit", method="post")
+      input(id="event_id", name="event_id", class="hide")
       div.row
         div(class="large-6 columns")
           label(for="event_title") Event Name 
@@ -37,8 +38,7 @@ block content
               div(class="large-6 columns")
                 div.input-group
                   span(class="input-group-label") End
-                  input(id="event_time_end", name="event_time_end", class="input-group-field", type="time", placeholder="8:00pm")
-      
+                  input(id="event_time_end", name="event_time_end", class="input-group-field", type="time", placeholder="8:00pm")      
       div.row
         div(class="large-12 columns")
           label(for="event_rsvp_link") RSVP Link
@@ -55,3 +55,12 @@ block content
         
       button(class="close-button", data-close, aria-label="Close modal", type="button")
         span(aria-hidden="true") &times;
+  
+  //- delete confirm modal
+  div(class="reveal", id="delete_modal", data-reveal)
+    p(class="confirm_message")
+    div(class="row confirm_buttons")
+      a(href="#", class="button alert close-reveal-modal")
+        | Cancel
+      a(href="#", class="button success delete-event-modal")
+        | Delete
