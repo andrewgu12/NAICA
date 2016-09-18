@@ -10,11 +10,13 @@ router.get('/', (req, res, next) => {
   res.render('newsletter/show', {title: 'Newsletter | NAICA'});
 });
 router.get('/:id', function (req, res) {
-	var filepath = '/newsletters/'+req.params.id;
-	fs.readFile(__dirname + filePath , function (err,data){
-        res.contentType("application/pdf");
-        res.send(data);
-    });
+	var filepath = './public/newsletters/'+req.params.id;
+	var file = fs.createReadStream(filepath);
+	var stat = fs.statSync(filepath);
+	res.setHeader('Content-Length', stat.size);
+	res.setHeader('Content-Type', 'application/pdf');
+	res.setHeader('Content-Disposition', 'attachment; filename='+req.params.id);
+	file.pipe(res);
 });
 
 module.exports = router;
