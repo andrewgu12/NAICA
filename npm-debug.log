@@ -9,7 +9,7 @@
 6 silly lifecycle naica@0.0.0~prestart: no script for prestart, continuing
 7 info lifecycle naica@0.0.0~start: naica@0.0.0
 8 verbose lifecycle naica@0.0.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle naica@0.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/matthewjiang/workspace/NAICA/node_modules/.bin:/usr/local/Cellar/node/6.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+9 verbose lifecycle naica@0.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/matthewjiang/workspace/NAICA/node_modules/.bin:/usr/local/Cellar/node/6.3.0/bin:/Users/matthewjiang/.rvm/gems/ruby-1.9.3-p551/bin:/Users/matthewjiang/.rvm/gems/ruby-1.9.3-p551@global/bin:/Users/matthewjiang/.rvm/rubies/ruby-1.9.3-p551/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/matthewjiang/.rvm/gems/ruby-1.9.3-p551/bin:/Users/matthewjiang/.rvm/gems/ruby-1.9.3-p551@global/bin:/Users/matthewjiang/.rvm/rubies/ruby-1.9.3-p551/bin:/Users/matthewjiang/.rvm/bin:/Users/matthewjiang/.rvm/bin
 10 verbose lifecycle naica@0.0.0~start: CWD: /Users/matthewjiang/workspace/NAICA
 11 silly lifecycle naica@0.0.0~start: Args: [ '-c', 'node --harmony ./bin/www' ]
 12 silly lifecycle naica@0.0.0~start: Returned: code: 1  signal: null
