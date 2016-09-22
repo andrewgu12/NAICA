@@ -4634,6 +4634,21 @@ footer div.footer_inner .right {
   color: #F06D64;
   transition: color 0.5s;
 }
+.top-bar .top-bar_container ul.menu li.menu-item ul.submenu-dropdown li {
+  color: #fefefe;
+  text-align: center;
+}
+.top-bar .top-bar_container ul.menu li.menu-item ul.submenu-dropdown li a {
+  color: #fefefe;
+}
+.top-bar .top-bar_container ul.menu li.menu-item ul.submenu-dropdown li:hover {
+  background-color: #fefefe;
+  transition: background-color 0.5s;
+}
+.top-bar .top-bar_container ul.menu li.menu-item ul.submenu-dropdown li:hover a {
+  color: #F06D64;
+  transition: color 0.5s;
+}
 
 #homepage-container {
   background: url(../images/NAICA2.jpg) no-repeat center center fixed;
@@ -4703,6 +4718,14 @@ form#admin-signup {
 div#footer-admin {
   text-align: center;
   line-height: 3.75rem;
+}
+
+div#delete_modal div.confirm_buttons {
+  width: 15rem;
+  margin: 0 auto;
+}
+div#delete_modal div.confirm_buttons a {
+  margin-right: 1rem;
 }
 
 #about-box {
@@ -4799,4 +4822,42 @@ div#footer-admin {
   text-align: center;
   overflow: auto;
   float: left;
+}
+
+.newsletter-topblock {
+  height: 100px;
+  overflow: auto;
+}
+
+.archive {
+  padding-bottom: 50px;
+  overflow: auto;
+}
+
+.newsletter {
+  overflow: auto;
+}
+
+.newsletter-text {
+  padding-top: 50px;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.newsletter-container {
+  width: 25%;
+  padding: 20px;
+  float: left;
+}
+
+.newsletter-image {
+  border: 1px solid #F06D64;
+  padding: 10px;
+}
+
+.newsletter-title {
+  font-size: 125%;
+  color: #F06D64;
+  border-bottom: 1px solid #F06D64;
+  overflow: auto;
 }

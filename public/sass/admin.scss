@@ -16,3 +16,14 @@ div#footer-admin {
 	text-align: center;
 	line-height: $footer_height;
 }
+
+// modals outside of container
+div#delete_modal {
+	div.confirm_buttons {
+		width: 15rem;
+		margin: 0 auto;
+		a {
+				margin-right: 1rem;
+		}
+	}
+}
