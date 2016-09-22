@@ -10,44 +10,44 @@ block content
         br
         | Chang Chen
         br 
-        | chang@naica.org 
+        | chang[AT]naica.org 
       p
         | MARKETING 
         br
         | Diana Chou
         br 
-        | diana@naica.org
+        | diana[AT]naica.org
       p
         | FINANCE
         br
         | John Leung
         br
-        | john@naica.org
+        | john[AT]naica.org
         br 
         br
         | Alice Liu
         br
-        | alice@naica.org
+        | alice[AT]naica.org
       p 
         | DEVELOPMENT
         br
         | Chris Seto
         br
-        | chris@naica.org
+        | chris[AT]naica.org
         br 
         br
         | Valerie Yu
         br
-        | valerie@naica.org
+        | valerie[AT]naica.org
     div(class="large-4 columns contact-column extra-padding")
       p Text!
     div(class="large-4 columns contact-column")
-      p Feel free to send us a message through this form! We'll get back to you as soon as we can.
+      p(id="contact-text") Feel free to send us a message through this form! We'll get back to you as soon as we can.
       form(id="submit_question")
         label(for="name") Name
           input(id="contact-name", name="name", type="text", placeholder="Joe Cheng")
         label(for="email") Email
-          input(id="contactemail", name="email", type="email", placeholder="email@domain.org")
+          input(id="contact-email", name="email", type="email", placeholder="email@domain.org")
         label(for="message") Message
           textarea(placeholder="How can we help you?", rows="6", name="message", id="contact-message")
         a(href="#", class="button float-right", id="submit-contact-button") Submit!

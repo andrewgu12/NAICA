@@ -1,7 +1,8 @@
 require('babel-register');
 
 const express    = require('express');
-const nodemailer = require('nodemailer');
+const postmark   = require('postmark');
+const connection = require('../config/connection');
 const router     = express.Router();
 
 router.get('/', (req, res, next) => {
@@ -10,34 +11,19 @@ router.get('/', (req, res, next) => {
 });
 
 router.post('/submit', (req, res, next) => {
-  // create transporter object
+  const client = new postmark.Client(connection.postmarkKey);
   console.log('/contact/submit');
-  const transporter = nodemailer.createTransporter({
-    service: 'Gmail',
-    auth: {
-      user: 'andrew.m.gu@gmail.com',
-      pass: 'gyst123119'
-    }
-  });
-
-  const mailOptions = {
-    from: req.body.email,
-    to: 'andrew.m.gu@gmail.com',
-    subject: 'NAICA Question!',
-    message: req.body.message
-  };
-  console.log(transporter);
-  console.log(mailOptions);
-  transporter.sendMail(mailOptions, function(err, info) {
-    console.log(err);
-    console.log(info);
+  client.sendEmail({
+    'From': 'andrew@mingbogu.com',
+    'To': 'andrew.m.gu@gmail.com',
+    'Subject': 'NAICA Question!',
+    'TextBody': 'Email: ' + req.body.email + '\n Message: ' + req.body.message
+  }, (err, success) => {
     if (err) {
-      console.log(err);
-    } else {
-      console.log(info);
+      res.send(err);
     }
-  })
-  res.send('Done!');
+    res.send(success);
+  });
 });
 
 module.exports = router;

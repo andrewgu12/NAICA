@@ -49,9 +49,9 @@ $(document).ready(function() {
   $('#submit-contact-button').on('click', function() {
     $(this).attr('disabled', 'disabled');
 
-    var contactName = $('#contact-name').val(),
+    var contactName  = $('#contact-name').val(),
         contactEmail = $('#contact-email').val(),
-        message = $('#contact-message').val();
+        message      = $('#contact-message').val();
 
     $.ajax({
       type: 'POST',
@@ -61,9 +61,12 @@ $(document).ready(function() {
         email: contactEmail,
         message: message
       }
-    }).done(function(data) {
+    }).done(function(response) {
       $('#submit-contact-button').removeAttr('disabled');
-      console.log(data);
+      $('#contact-text').text('Thank you for sending us the message! We will try and get back to you as soon as we can!');
+      $('#contact-name').val('');
+      $('#contact-email').val('');
+      $('#contact-message').val('');
     });
   })
 });
