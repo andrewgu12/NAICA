@@ -1,0 +1,54 @@
+extends layout
+
+block content
+  h2 Contact Us!
+  div.row
+    div(class="large-4 columns contact-column extra-padding")
+      p Contact any of our departments through our directors.
+      p 
+        | COMMUNICATIONS 
+        br
+        | Chang Chen
+        br 
+        | chang@naica.org 
+      p
+        | MARKETING 
+        br
+        | Diana Chou
+        br 
+        | diana@naica.org
+      p
+        | FINANCE
+        br
+        | John Leung
+        br
+        | john@naica.org
+        br 
+        br
+        | Alice Liu
+        br
+        | alice@naica.org
+      p 
+        | DEVELOPMENT
+        br
+        | Chris Seto
+        br
+        | chris@naica.org
+        br 
+        br
+        | Valerie Yu
+        br
+        | valerie@naica.org
+    div(class="large-4 columns contact-column extra-padding")
+      p Text!
+    div(class="large-4 columns contact-column")
+      p Feel free to send us a message through this form! We'll get back to you as soon as we can.
+      form(id="submit_question")
+        label(for="name") Name
+          input(id="contact-name", name="name", type="text", placeholder="Joe Cheng")
+        label(for="email") Email
+          input(id="contactemail", name="email", type="email", placeholder="email@domain.org")
+        label(for="message") Message
+          textarea(placeholder="How can we help you?", rows="6", name="message", id="contact-message")
+        a(href="#", class="button float-right", id="submit-contact-button") Submit!
+      

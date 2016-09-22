@@ -1,0 +1,13 @@
+div.contact-column {
+  border: 1px solid map-get($foundation-palette, primary);
+  width: 30%;
+  padding: 0.9375rem;
+  min-height: 30rem;
+
+  p, label, input[type="text"], input[type="email"], textarea {
+    font-size: 0.775rem;
+  }
+}
+div.extra-padding {
+  margin-right: 5%;
+}

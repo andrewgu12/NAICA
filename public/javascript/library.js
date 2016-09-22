@@ -44,4 +44,26 @@ $(document).ready(function() {
   $('.close-reveal-modal').on('click', function() {
     $('#delete_modal').foundation('close');
   });
+
+  // contact form
+  $('#submit-contact-button').on('click', function() {
+    $(this).attr('disabled', 'disabled');
+
+    var contactName = $('#contact-name').val(),
+        contactEmail = $('#contact-email').val(),
+        message = $('#contact-message').val();
+
+    $.ajax({
+      type: 'POST',
+      url: '/contact/submit',
+      data: {
+        name: contactName,
+        email: contactEmail,
+        message: message
+      }
+    }).done(function(data) {
+      $('#submit-contact-button').removeAttr('disabled');
+      console.log(data);
+    });
+  })
 });

@@ -4545,6 +4545,13 @@ html, body {
   font-size: 16px;
 }
 
+h2 {
+  color: #F06D64;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 3rem 0 0.25rem 0;
+}
+
 div#container {
   margin: 0 auto;
   padding: 0;
@@ -4669,12 +4676,6 @@ footer div.footer_inner .right {
 
 #events-page .large-6 {
   width: 47.5%;
-}
-#events-page .large-6 h2 {
-  color: #F06D64;
-  font-weight: 600;
-  font-size: 1.5rem;
-  margin: 3rem 0 0.25rem 0;
 }
 #events-page .event-box {
   border: 1px solid #F06D64;
@@ -4822,4 +4823,18 @@ div#delete_modal div.confirm_buttons a {
   text-align: center;
   overflow: auto;
   float: left;
+}
+
+div.contact-column {
+  border: 1px solid #F06D64;
+  width: 30%;
+  padding: 0.9375rem;
+  min-height: 30rem;
+}
+div.contact-column p, div.contact-column label, div.contact-column input[type="text"], div.contact-column input[type="email"], div.contact-column textarea {
+  font-size: 0.775rem;
+}
+
+div.extra-padding {
+  margin-right: 5%;
 }

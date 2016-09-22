@@ -3,12 +3,6 @@ $event-box-top-margin: 0.5rem;
 #events-page {
 	.large-6 {
 		width: 47.5%;
-		h2 {
-			color: map-get($foundation-palette, primary);
-			font-weight: 600;
-			font-size: 1.5rem;
-			margin: 3rem 0 0.25rem 0;
-		}
 	}
 	.event-box {
 		border: 1px solid map-get($foundation-palette, primary);
@@ -33,7 +27,7 @@ $event-box-top-margin: 0.5rem;
 				width: 8rem;
 				font-weight: 600;
 				height: 3rem;
-				line-height: 1.5rem;          
+				line-height: 1.5rem;
 			}
 		}
 	}
