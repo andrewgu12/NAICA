@@ -4838,3 +4838,41 @@ div.contact-column p, div.contact-column label, div.contact-column input[type="t
 div.extra-padding {
   margin-right: 5%;
 }
+
+.newsletter-topblock {
+  height: 100px;
+  overflow: auto;
+}
+
+.archive {
+  padding-bottom: 50px;
+  overflow: auto;
+}
+
+.newsletter {
+  overflow: auto;
+}
+
+.newsletter-text {
+  padding-top: 50px;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.newsletter-container {
+  width: 25%;
+  padding: 20px;
+  float: left;
+}
+
+.newsletter-image {
+  border: 1px solid #F06D64;
+  padding: 10px;
+}
+
+.newsletter-title {
+  font-size: 125%;
+  color: #F06D64;
+  border-bottom: 1px solid #F06D64;
+  overflow: auto;
+}
