@@ -4750,9 +4750,9 @@ div#delete_modal div.confirm_buttons a {
 }
 
 #director-container {
-  padding-top: 50px;
+  padding-top: 20px;
   overflow: auto;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 }
 
 .description-title {
@@ -4777,8 +4777,9 @@ div#delete_modal div.confirm_buttons a {
 }
 
 .director-profile {
+  margin-top: 50px;
   height: 200px;
-  width: 75%;
+  width: 80%;
   position: relative;
 }
 
