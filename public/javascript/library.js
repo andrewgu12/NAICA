@@ -5,6 +5,24 @@ $(document).ready(function() {
   // adjust homepage height based on background image size
   $('#homepage-container').css('height', $(document).height() - $('.top-bar').height());
 
+  // sign up for newsletter
+  $('#submit_email_button').on('click', function(e) {
+      e.preventDefault();
+      email = $('#email-address').val();
+      console.log(email);
+      $.ajax({
+        type: 'POST',
+        url: '/newsletter',
+        data: {
+          email_address: email
+        }
+      }).done(function(data) {
+        console.log(data);
+        $('label[for="email-address"]').text('Thank you for signing up!');
+        $('#email-address').val('');
+      });
+  });
+
   // admin events modal
   $('.edit_event').on('click', function(e){
     e.preventDefault();

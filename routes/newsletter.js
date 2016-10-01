@@ -61,10 +61,10 @@ router.post('/', (req, res, next) => {
     subscriber.save((err, savedEmail) => {
       if (err)
         throw err;
-      console.log(savedEmail);
+      res.send(savedEmail);
     })
   }).catch((err) => {
-    console.log(err);
+    res.send(err);
   })
 });
 
