@@ -4664,11 +4664,14 @@ footer div.footer_inner .right {
   -o-background-size: cover;
   background-size: cover;
 }
-#homepage-container form#submit_email {
+#homepage-container div#submit_email_row {
+  max-width: none;
+}
+#homepage-container div#submit_email {
   position: absolute;
   bottom: 3rem;
 }
-#homepage-container form#submit_email label {
+#homepage-container div#submit_email label {
   color: #fefefe;
   font-weight: 600;
   font-size: 1rem;
