@@ -9,7 +9,7 @@ $foundation-palette: (
 );
 
 $topbar-background: map-get($foundation-palette, primary);
-
+$topbar-background-homepage: rgba(0,0,0,0.3);
 // converts to ~960px
 $inner_width: 60rem;
 $admin_inner_width: 40rem;
@@ -23,4 +23,3 @@ $footer_height: 3.75rem;
 $footer_spacing: 1.25rem;
 // body font family
 $body-font-family: "Raleway", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-

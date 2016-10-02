@@ -4552,7 +4552,7 @@ h2 {
   margin: 3rem 0 0.25rem 0;
 }
 
-div#container {
+div.container {
   margin: 0 auto;
   padding: 0;
   min-height: 100%;
@@ -4560,11 +4560,11 @@ div#container {
   margin: 0 auto -3.75rem;
   width: 100%;
 }
-div#container div#inner-container {
+div.container div#inner-container {
   width: 62rem;
   margin: 0 auto;
 }
-div#container div#inner-container .title {
+div.container div#inner-container .title {
   border-bottom: 1px dotted #F06D64;
   margin: 1rem 0;
 }
@@ -4663,6 +4663,15 @@ footer div.footer_inner .right {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+#homepage-container div.top-bar {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+#homepage-container div.top-bar ul.menu {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+#homepage-container div.top-bar ul.menu li a {
+  font-weight: bold;
 }
 #homepage-container div#submit_email_row {
   max-width: none;
