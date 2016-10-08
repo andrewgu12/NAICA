@@ -10,31 +10,31 @@ const DirectorBox    = require('../components/generic/director.react');
 
 router.get('/', (req, res, next) => {
   let testDirector = new Director({
-    name: 'Test Director',
+    name: 'Chang Chen',
     description: 'Test Description',
     imgSource: '/images/profiles/cchen.png',
     title: 'Test Title'
   });
   let testDirector2 = new Director({
-    name: 'Test Director',
+    name: 'Christopher Seto',
     description: 'Test Description',
     imgSource: '/images/profiles/cseto.png',
     title: 'Test Title'
   });
   let testDirector3 = new Director({
-    name: 'Test Director',
+    name: 'Valerie Yu',
     description: 'Test Description',
     imgSource: '/images/profiles/vyu.png',
     title: 'Test Title'
   });
   let testDirector4 = new Director({
-    name: 'Test Director',
+    name: 'Diana Chou',
     description: 'Test Description',
     imgSource: '/images/profiles/dchou.png',
     title: 'Test Title'
   });
   let testDirector5 = new Director({
-    name: 'Test Director',
+    name: 'Alice Liu',
     description: 'Test Description',
     imgSource: '/images/profiles/aliu.png',
     title: 'Test Title'

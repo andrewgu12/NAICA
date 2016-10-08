@@ -4597,8 +4597,8 @@ footer div.footer_inner .right {
 }
 
 .top-bar {
-  height: 5.625rem;
-  line-height: 5.625rem;
+  height: 5.025rem;
+  line-height: 5.025rem;
   padding-top: 0;
   padding-bottom: 0;
 }
@@ -4623,7 +4623,7 @@ footer div.footer_inner .right {
   background-color: #F06D64;
 }
 .top-bar .top-bar_container ul.menu li.menu-item {
-  height: 5.625rem;
+  height: 5.025rem;
   color: #fefefe;
 }
 .top-bar .top-bar_container ul.menu li.menu-item a {
@@ -4665,10 +4665,10 @@ footer div.footer_inner .right {
   background-size: cover;
 }
 #homepage-container div.top-bar {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 #homepage-container div.top-bar ul.menu {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: transparent;
 }
 #homepage-container div.top-bar ul.menu li a {
   font-weight: bold;
@@ -4742,7 +4742,7 @@ div#delete_modal div.confirm_buttons a {
 }
 
 #about-box {
-  padding-top: 100px;
+  padding-top: 50px;
   padding-bottom: 50px;
   overflow: auto;
   border-bottom: 1px solid #F06D64;
@@ -4750,8 +4750,8 @@ div#delete_modal div.confirm_buttons a {
 
 #naica-about-logo {
   width: 30%;
-  padding: 2%;
-  margin-top: 2%;
+  padding: 0;
+  margin-top: 0;
   float: left;
 }
 
@@ -4759,6 +4759,7 @@ div#delete_modal div.confirm_buttons a {
   width: 70%;
   float: right;
   padding-left: 5%;
+  padding-top: 3.9%;
 }
 
 #director-container {
@@ -4803,7 +4804,7 @@ div#delete_modal div.confirm_buttons a {
   margin-left: auto;
   margin-right: auto;
   position: absolute;
-  height: 200px;
+  height: 0px;
   opacity: 0;
   z-index: 10;
 }

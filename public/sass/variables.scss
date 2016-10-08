@@ -9,15 +9,17 @@ $foundation-palette: (
 );
 
 $topbar-background: map-get($foundation-palette, primary);
-$topbar-background-homepage: rgba(0,0,0,0.3);
+$topbar-background-homepage: rgba(0,0,0,0.6);
+// used to overlay on top of the regular homepage and not cause the opacities to overlap
+$topbar-background-homepage-transparent: rgba(0,0,0,0);
 // converts to ~960px
 $inner_width: 60rem;
 $admin_inner_width: 40rem;
 // converts to ~992px
 $inner_width_container: 62rem;
 // converts to ~150 px
-$menu_height: 5.625rem;
-// converts to ~60px
+$menu_height: 5.025rem;
+// converts to ~56px
 $footer_height: 3.75rem;
 // footer spacing
 $footer_spacing: 1.25rem;
