@@ -1,0 +1,68 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   './keys.json' ]
+2 info using npm@2.15.0
+3 info using node@v4.4.2
+4 verbose install initial load of /Users/Chang/Desktop/NAICA/package.json
+5 verbose installManyTop reading scoped package data from /Users/Chang/Desktop/NAICA/node_modules/babel-preset-es2015/package.json
+6 verbose installManyTop reading scoped package data from /Users/Chang/Desktop/NAICA/node_modules/babel-preset-react/package.json
+7 verbose installManyTop reading scoped package data from /Users/Chang/Desktop/NAICA/node_modules/babel-register/package.json
+8 verbose installManyTop reading scoped package data from /Users/Chang/Desktop/NAICA/node_modules/babelify/package.json
+9 verbose installManyTop reading scoped package data from /Users/Chang/Desktop/NAICA/node_modules/body-parser/package.json
+10 verbose installManyTop reading scoped package data from /Users/Chang/Desktop/NAICA/node_modules/connect-mongo/package.json
+11 verbose installManyTop reading scoped package data from /Users/Chang/Desktop/NAICA/node_modules/cookie-parser/package.json
+12 verbose installManyTop reading scoped package data from /Users/Chang/Desktop/NAICA/node_modules/debug/package.json
+13 verbose installManyTop reading scoped package data from /Users/Chang/Desktop/NAICA/node_modules/express/package.json
+14 verbose installManyTop reading scoped package data from /Users/Chang/Desktop/NAICA/node_modules/express-session/package.json
+15 verbose installManyTop reading scoped package data from /Users/Chang/Desktop/NAICA/node_modules/foundation-sites/package.json
+16 verbose installManyTop reading scoped package data from /Users/Chang/Desktop/NAICA/node_modules/grunt/package.json
+17 verbose installManyTop reading scoped package data from /Users/Chang/Desktop/NAICA/node_modules/grunt-contrib-sass/package.json
+18 verbose installManyTop reading scoped package data from /Users/Chang/Desktop/NAICA/node_modules/grunt-contrib-uglify/package.json
+19 verbose installManyTop reading scoped package data from /Users/Chang/Desktop/NAICA/node_modules/grunt-contrib-watch/package.json
+20 verbose installManyTop reading scoped package data from /Users/Chang/Desktop/NAICA/node_modules/grunt-sass/package.json
+21 verbose installManyTop reading scoped package data from /Users/Chang/Desktop/NAICA/node_modules/jade/package.json
+22 verbose installManyTop reading scoped package data from /Users/Chang/Desktop/NAICA/node_modules/mailchimp-api-v3/package.json
+23 verbose installManyTop reading scoped package data from /Users/Chang/Desktop/NAICA/node_modules/moment/package.json
+24 verbose installManyTop reading scoped package data from /Users/Chang/Desktop/NAICA/node_modules/mongoose/package.json
+25 verbose installManyTop reading scoped package data from /Users/Chang/Desktop/NAICA/node_modules/morgan/package.json
+26 verbose installManyTop reading scoped package data from /Users/Chang/Desktop/NAICA/node_modules/node-jsx/package.json
+27 verbose installManyTop reading scoped package data from /Users/Chang/Desktop/NAICA/node_modules/passport/package.json
+28 verbose installManyTop reading scoped package data from /Users/Chang/Desktop/NAICA/node_modules/passport-local/package.json
+29 verbose installManyTop reading scoped package data from /Users/Chang/Desktop/NAICA/node_modules/postmark/package.json
+30 verbose installManyTop reading scoped package data from /Users/Chang/Desktop/NAICA/node_modules/react/package.json
+31 verbose installManyTop reading scoped package data from /Users/Chang/Desktop/NAICA/node_modules/react-dom/package.json
+32 verbose installManyTop reading scoped package data from /Users/Chang/Desktop/NAICA/node_modules/serve-favicon/package.json
+33 verbose installManyTop reading scoped package data from /Users/Chang/Desktop/NAICA/node_modules/serve-function/package.json
+34 verbose installManyTop reading scoped package data from /Users/Chang/Desktop/NAICA/node_modules/should/package.json
+35 verbose installManyTop reading scoped package data from /Users/Chang/Desktop/NAICA/node_modules/supertest/package.json
+36 info package.json node-jsx@0.13.3 license should be a valid SPDX license expression
+37 info package.json passport-local@1.0.0 No license field.
+38 info package.json postmark@1.3.1 No license field.
+39 verbose readDependencies loading dependencies from /Users/Chang/Desktop/NAICA/package.json
+40 silly cache add args [ './keys.json', null ]
+41 verbose cache add spec ./keys.json
+42 silly cache add parsed spec Result {
+42 silly cache add   raw: './keys.json',
+42 silly cache add   scope: null,
+42 silly cache add   name: null,
+42 silly cache add   rawSpec: './keys.json',
+42 silly cache add   spec: '/Users/Chang/Desktop/NAICA/keys.json',
+42 silly cache add   type: 'local' }
+43 error addLocal Could not install /Users/Chang/Desktop/NAICA/keys.json
+44 verbose stack Error: ENOENT: no such file or directory, open '/Users/Chang/Desktop/NAICA/keys.json'
+44 verbose stack     at Error (native)
+45 verbose cwd /Users/Chang/Desktop/NAICA
+46 error Darwin 15.6.0
+47 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "./keys.json"
+48 error node v4.4.2
+49 error npm  v2.15.0
+50 error path /Users/Chang/Desktop/NAICA/keys.json
+51 error code ENOENT
+52 error errno -2
+53 error syscall open
+54 error enoent ENOENT: no such file or directory, open '/Users/Chang/Desktop/NAICA/keys.json'
+54 error enoent This is most likely not a problem with npm itself
+54 error enoent and is related to npm not being able to find a file.
+55 verbose exit [ -2, true ]
