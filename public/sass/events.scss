@@ -1,4 +1,5 @@
 $event-box-top-margin: 0.5rem;
+$event-box-left-padding: 0.9375rem;
 
 #events-page {
 	.large-6 {
@@ -8,14 +9,22 @@ $event-box-top-margin: 0.5rem;
 		border: 1px solid map-get($foundation-palette, primary);
 		padding: 0.5rem;
 		margin-bottom: 1.5rem;
-		p {
+		.event-header {
+			padding-right: $event-box-top-margin;
+			margin-left: 0;
+			margin-right: 0;
+			p {
+				line-height: 1.2;
+				&.event-info {
+					margin: $event-box-top-margin 0 0.5rem 0;
+				}
+			}
+		}
+		p.event-description {
+			padding-left: $event-box-left-padding;
+			padding-right: $event-box-top-margin;
+			margin-bottom: 0.5rem;
 			line-height: 1.2;
-			&.event-info {
-				margin: $event-box-top-margin 0 0.5rem 0;
-			}
-			&.event-description {
-				margin-bottom: 0.5rem;
-			}
 		}
 		h3 {
 			color: map-get($foundation-palette, primary);

@@ -143,7 +143,7 @@ router.get('/events/delete/:id', isLoggedIn, (req, res, next) => {
 /**************************
  * Login, Logout, Register
  *************************/
-router.get('/signup', (req, res, next) => {
+router.get('/signup', isLoggedIn, (req, res, next) => {
   res.render('admin/signup', {title: 'Create an Admin User | NAICA'});
 });
 
