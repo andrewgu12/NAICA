@@ -14,7 +14,7 @@ var EventBox = React.createClass({
 		        	<h3>{this.props.event.title}</h3>
 		    		</div>
 		    		<div className="large-4 columns buttons-column">
-		    			<EventButton buttonText="RSVP" url={this.props.event.rsvpLink} />
+		    			<EventButton buttonText="More Info" url={this.props.event.moreInfo} />
 		    		</div>
 					</div>
 					<p className="event-description">{this.props.event.description}</p>
