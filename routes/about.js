@@ -21,6 +21,12 @@ router.get('/', (req, res, next) => {
     imgSource: '/images/profiles/cseto.png',
     title: 'Test Title'
   });
+  let testDirector6 = new Director({
+    name: 'John Leung',
+    description: 'Test Description',
+    imgSource: '/images/profiles/jleung.png',
+    title: 'Test Title'
+  });
   let testDirector3 = new Director({
     name: 'Valerie Yu',
     description: 'Test Description',
@@ -42,6 +48,7 @@ router.get('/', (req, res, next) => {
 
   const directorBox1 = ReactDOMServer.renderToString(React.createElement(DirectorBox, {director: testDirector}));
   const directorBox2 = ReactDOMServer.renderToString(React.createElement(DirectorBox, {director: testDirector2}));
+  const directorBox6 = ReactDOMServer.renderToString(React.createElement(DirectorBox, {director: testDirector6}));
   const directorBox3 = ReactDOMServer.renderToString(React.createElement(DirectorBox, {director: testDirector3}));
   const directorBox4 = ReactDOMServer.renderToString(React.createElement(DirectorBox, {director: testDirector4}));
   const directorBox5 = ReactDOMServer.renderToString(React.createElement(DirectorBox, {director: testDirector5}));
@@ -50,6 +57,7 @@ router.get('/', (req, res, next) => {
     title: 'About Us | NAICA',
     director1: directorBox1,
     director2: directorBox2,
+    director6: directorBox6,
     director3: directorBox3,
     director4: directorBox4,
     director5: directorBox5
