@@ -1,12 +1,13 @@
-.newsletter-topblock{
-	height:100px;
-	overflow: auto;
-}
+// .newsletter-topblock{
+// 	height:100px;
+// 	overflow: auto;
+// }
 .archive{
 	padding-bottom: 50px;
 	overflow: auto;
 }
 .newsletter{
+	margin-top: 3rem;
 	overflow: auto;
 }
 .newsletter-text{
@@ -28,4 +29,7 @@
 	border-bottom: 1px solid map-get($foundation-palette, primary);
 	overflow: auto;
 
+}
+div#submit_email_row {
+	margin-top: 2rem;
 }

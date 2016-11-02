@@ -4861,17 +4861,13 @@ div.extra-padding {
   margin-right: 5%;
 }
 
-.newsletter-topblock {
-  height: 100px;
-  overflow: auto;
-}
-
 .archive {
   padding-bottom: 50px;
   overflow: auto;
 }
 
 .newsletter {
+  margin-top: 3rem;
   overflow: auto;
 }
 
@@ -4895,4 +4891,8 @@ div.extra-padding {
   color: #F06D64;
   border-bottom: 1px solid #F06D64;
   overflow: auto;
+}
+
+div#submit_email_row {
+  margin-top: 2rem;
 }
