@@ -7,6 +7,12 @@ div.contact-column {
   p, label, input[type="text"], input[type="email"], textarea {
     font-size: 0.775rem;
   }
+  a.contact-link {
+    color: black;
+    &:hover {
+        border-bottom: 1px dotted map-get($foundation-palette, primary);
+    }
+  }
 }
 div.extra-padding {
   margin-right: 5%;

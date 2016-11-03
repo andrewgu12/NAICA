@@ -15,7 +15,7 @@ router.post('/submit', (req, res, next) => {
   console.log('/contact/submit');
   client.sendEmail({
     'From': 'andrew@mingbogu.com',
-    'To': 'andrew.m.gu@gmail.com',
+    'To': 'support@naica.org',
     'Subject': 'NAICA Question!',
     'TextBody': 'Email: ' + req.body.email + '\n Message: ' + req.body.message
   }, (err, success) => {

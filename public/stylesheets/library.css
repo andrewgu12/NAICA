@@ -4857,6 +4857,12 @@ div.contact-column {
 div.contact-column p, div.contact-column label, div.contact-column input[type="text"], div.contact-column input[type="email"], div.contact-column textarea {
   font-size: 0.775rem;
 }
+div.contact-column a.contact-link {
+  color: black;
+}
+div.contact-column a.contact-link:hover {
+  border-bottom: 1px dotted #F06D64;
+}
 
 div.extra-padding {
   margin-right: 5%;
