@@ -3,7 +3,7 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         options: {
-          style: 'expanded',
+          style: 'compressed',
           sourcemap: 'none'
         },
         files: {
@@ -14,7 +14,7 @@ module.exports = function(grunt) {
     uglify: {
       options: {
         mangle: false,
-        compress: false
+        compress: true
       },
       my_target: {
         files: {

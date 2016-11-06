@@ -14,9 +14,9 @@ router.post('/submit', (req, res, next) => {
   const client = new postmark.Client(connection.postmarkKey);
   console.log('/contact/submit');
   client.sendEmail({
-    'From': 'andrew@mingbogu.com',
-    'To': 'support@naica.org',
-    'Subject': 'NAICA Question!',
+    'From':     'andrew@mingbogu.com',
+    'To':       'support@naica.org',
+    'Subject':  'NAICA Question!',
     'TextBody': 'Email: ' + req.body.email + '\n Message: ' + req.body.message
   }, (err, success) => {
     if (err) {
