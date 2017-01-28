@@ -17,7 +17,6 @@
     "express": "~4.13.4",
     "express-session": "^1.14.0",
     "foundation-sites": "^6.2.3",
-    "jade": "~1.11.0",
     "mailchimp-api-v3": "^1.4.0",
     "moment": "^2.14.1",
     "mongoose": "^4.5.5",
