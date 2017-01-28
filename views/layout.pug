@@ -10,10 +10,10 @@ html
 		link(rel='stylesheet', href='/stylesheets/library.css')
 	body
 		.container
-			include ./menu.jade
+			include ./menu.pug
 			#inner-container 
 				block content
 			//- for the footer
 			#push 
-		include ./footer.jade
+		include ./footer.pug
 		script(src='/javascript/app.min.js')

@@ -3,8 +3,8 @@ extends ../layout
 block content
   h3 View All Events
   p(class="return_message")
-    | !{message}
-  !{eventsTable}
+    | != message
+  != eventsTable
   
   div(class="reveal", id="edit_modal", data-reveal)
     form(id="edit_event", action="/admin/events/edit", method="post")
